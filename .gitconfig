@@ -1,0 +1,13 @@
+[user]
+	name = Shinya Fujino
+	email = shf0811@gmail.com
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+	excludesfile = ~/.gitignore_global
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	lg = log --pretty=oneline --decorate --graph --abbrev-commit
+	lga = log --pretty=oneline --decorate --all --graph --abbrev-commit
