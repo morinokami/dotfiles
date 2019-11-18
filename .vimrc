@@ -8,7 +8,6 @@ endif
 call plug#begin()
 
 Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -16,17 +15,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'conradirwin/vim-bracketed-paste'
 Plug 'tomasiser/vim-code-dark'
+Plug 'scrooloose/syntastic'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'tell-k/vim-autopep8'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'hashivim/vim-terraform'
 
 call plug#end()
-
-
-" NERDTree
-let NERDTreeShowHidden=1
-map <C-n> :NERDTreeToggle<CR>
 
 
 " lightline
@@ -72,11 +67,21 @@ endfunction
 " vim-code-dark
 colorscheme codedark
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_go_checkers = ['golint', 'govet']
+
 " vim-go
 set autowrite
-let g:go_fmt_command = "goimports"
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
 au FileType go nmap <silent> <C-g>r <Plug>(go-run)
 au FileType go nmap <silent> <C-g>s <Plug>(go-def-split)
 au FileType go nmap <silent> <C-g>v <Plug>(go-def-vertical)
