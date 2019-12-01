@@ -11,6 +11,7 @@
     "editor.formatOnPaste": true,
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
+    "editor.renderWhitespace": "all",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
