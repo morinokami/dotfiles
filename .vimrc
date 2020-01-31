@@ -20,7 +20,7 @@ Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 Plug 'hashivim/vim-terraform'
 
 call plug#end()
@@ -59,6 +59,8 @@ let g:black_linelength = 80
 autocmd BufWritePre *.py execute ':Black'
 
 " vim-lsp
+" Installing python server:
+" $ pip install python-language-server
 if executable('pyls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'pyls',
@@ -66,7 +68,9 @@ if executable('pyls')
         \ 'whitelist': ['python'],
         \ })
 endif
-
+" Installing go server:
+" $ go get -u golang.org/x/tools/gopls
+" $ go get -u github.com/sourcegraph/go-langserver
 if executable('gopls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'gopls',
