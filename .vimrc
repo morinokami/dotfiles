@@ -14,12 +14,12 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'conradirwin/vim-bracketed-paste'
 Plug 'tomasiser/vim-code-dark'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'psf/black'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-goimports'
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 Plug 'hashivim/vim-terraform'
 
@@ -42,18 +42,6 @@ let g:fzf_action = {
 " vim-code-dark
 colorscheme codedark
 
-" vim-go
-set autowrite
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-let g:go_fmt_autosave = 1
-let g:go_fmt_command = "goimports"
-au FileType go nmap <silent> <C-g>r <Plug>(go-run)
-au FileType go nmap <silent> <C-g>s <Plug>(go-def-split)
-au FileType go nmap <silent> <C-g>v <Plug>(go-def-vertical)
-au FileType go nmap <silent> <C-g>t <Plug>(go-test)
-au FileType go nmap <silent> <C-g>i <Plug>(go-imports)
-
 " black
 let g:black_linelength = 80
 autocmd BufWritePre *.py execute ':Black'
@@ -70,7 +58,6 @@ if executable('pyls')
 endif
 " Installing go server:
 " $ go get -u golang.org/x/tools/gopls
-" $ go get -u github.com/sourcegraph/go-langserver
 if executable('gopls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'gopls',
@@ -212,6 +199,8 @@ set virtualedit=block
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
+" influence the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert
+set backspace=indent,eol,start
 
 
 "" Command line
