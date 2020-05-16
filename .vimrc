@@ -22,6 +22,7 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-goimports'
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 Plug 'hashivim/vim-terraform'
+Plug 'ryanolsonx/vim-lsp-typescript'
 
 call plug#end()
 
