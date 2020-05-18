@@ -176,3 +176,8 @@ fi
 #-----------------------------
 # Docker: https://docs.docker.com/docker-for-mac/#zsh
 
+# Add help command
+function help() {
+    bash -c "help $@"
+}
+
