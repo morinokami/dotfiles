@@ -7,6 +7,9 @@ endif
 
 call plug#begin()
 
+" git integration
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " status line
 Plug 'itchyny/lightline.vim'
 " file finder
