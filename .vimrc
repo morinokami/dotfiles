@@ -7,23 +7,30 @@ endif
 
 call plug#begin()
 
-Plug 'tpope/vim-fugitive'
+" status line
 Plug 'itchyny/lightline.vim'
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'conradirwin/vim-bracketed-paste'
+" file finder
+Plug 'tpope/vim-vinegar'
+Plug 'ctrlpvim/ctrlp.vim'
+" color scheme
 Plug 'tomasiser/vim-code-dark'
+" transparent pasting
+Plug 'conradirwin/vim-bracketed-paste'
+" Python code formatter
 Plug 'psf/black'
+" auto-format and goimports
+Plug 'mattn/vim-goimports'
+" lsp
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-goimports'
-Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
-Plug 'hashivim/vim-terraform'
 Plug 'ryanolsonx/vim-lsp-typescript'
 Plug 'ryanolsonx/vim-lsp-javascript'
+" markdown file preview
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
+" vim/terraform integration
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
@@ -34,12 +41,10 @@ let g:lightline = {
       \ }
 set laststatus=2
 
-" fzf
-nnoremap <C-p> :FZF<cr>
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit' }
+" ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 
 " vim-code-dark
 colorscheme codedark
@@ -106,6 +111,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 inoremap <C-c> <Esc>
+nmap sh :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
 
 
 "" Encoding
