@@ -116,6 +116,8 @@ let g:terraform_align=1
 let g:terraform_fmt_on_save=1
 
 
+"" :help options
+
 "" Key Mappings
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -213,6 +215,8 @@ hi Normal guibg=NONE ctermbg=NONE
 " completion
 set pumheight=10
 set colorcolumn=80
+" highlight the text line of the cursor
+set cursorline
 
 
 "" Movement
