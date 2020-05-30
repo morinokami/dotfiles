@@ -19,6 +19,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomasiser/vim-code-dark'
 " transparent pasting
 Plug 'conradirwin/vim-bracketed-paste'
+" comment stuff out
+Plug 'tpope/vim-commentary'
 " Python code formatter
 Plug 'psf/black'
 " auto-format and goimports
