@@ -21,6 +21,8 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'conradirwin/vim-bracketed-paste'
 " comment stuff out
 Plug 'tpope/vim-commentary'
+" insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'
 " Python code formatter
 Plug 'psf/black'
 " auto-format and goimports
@@ -224,6 +226,7 @@ set cursorline
 "" Movement
 nnoremap j gj
 nnoremap k gk
+set mouse=a
 
 
 "" Editing
