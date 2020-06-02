@@ -123,13 +123,24 @@ let g:terraform_fmt_on_save=1
 "" :help options
 
 "" Key Mappings
+" split windows
+nnoremap sh :split<Return><C-w>w
+nnoremap sv :vsplit<Return><C-w>w
+" move between windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+" resize windows
+nnoremap <C-w><up> <C-w>+
+nnoremap <C-w><down> <C-w>-
+nnoremap <C-w><left> <C-w><
+nnoremap <C-w><right> <C-w>>
+" manage tabs
+nnoremap te :tabedit<Return>
+nnoremap <Tab> :tabnext<Return>
+nnoremap <S-Tab> :tabprev<Return>
 inoremap <C-c> <Esc>
-nmap sh :split<Return><C-w>w
-nmap sv :vsplit<Return><C-w>w
 
 
 "" Encoding
