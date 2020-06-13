@@ -4,6 +4,9 @@
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 	excludesfile = ~/.gitignore_global
+	pager = delta --color-only --theme OneHalfDark
+[interactive]
+	diffFilter = delta --color-only --theme OneHalfDark
 [color]
 	diff = auto
 	status = auto
@@ -11,3 +14,8 @@
 [alias]
 	lg = log --pretty=oneline --decorate --graph --abbrev-commit
 	lga = log --pretty=oneline --decorate --all --graph --abbrev-commit
+	st = status -sb
+	ap = add -p
+	c = commit
+	co = checkout
+
