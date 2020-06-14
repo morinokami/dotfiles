@@ -12,10 +12,15 @@
 	status = auto
 	branch = auto
 [alias]
-	lg = log --pretty=oneline --decorate --graph --abbrev-commit
-	lga = log --pretty=oneline --decorate --all --graph --abbrev-commit
-	st = status -sb
+	s = status
+	ss = status -sb
+	a = !git add . && git status
 	ap = add -p
 	c = commit
+	cm = commit -m
+	ca = commit --amend
 	co = checkout
+	d = diff
+	lg = log --pretty=oneline --decorate --graph --abbrev-commit
+	lga = log --pretty=oneline --decorate --all --graph --abbrev-commit
 
