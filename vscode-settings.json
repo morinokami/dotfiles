@@ -27,5 +27,8 @@
   "[go]": {
     "editor.insertSpaces": false
   },
-  "go.useLanguageServer": true
+  "go.useLanguageServer": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
 }

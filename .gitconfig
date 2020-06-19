@@ -23,4 +23,5 @@
 	d = diff
 	lg = log --pretty=oneline --decorate --graph --abbrev-commit
 	lga = log --pretty=oneline --decorate --all --graph --abbrev-commit
-
+[merge]
+	conflictstyle = diff3
