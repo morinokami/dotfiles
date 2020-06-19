@@ -25,3 +25,4 @@
 	lga = log --pretty=oneline --decorate --all --graph --abbrev-commit
 [merge]
 	conflictstyle = diff3
+	tool = vimdiff
