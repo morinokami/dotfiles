@@ -24,7 +24,7 @@ Plug 'tpope/vim-commentary'
 " insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 " Python code formatter
-Plug 'psf/black', { 'tag': '19.10b0' }
+Plug 'psf/black'
 " auto-format and goimports
 Plug 'mattn/vim-goimports'
 " lsp
