@@ -28,7 +28,6 @@ Plug 'psf/black'
 " auto-format and goimports
 Plug 'mattn/vim-goimports'
 " lsp
-Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
