@@ -19,15 +19,9 @@
   "[python]": {
     "editor.tabSize": 4
   },
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true,
-  "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["--line-length", "80"],
   "[go]": {
     "editor.insertSpaces": false
   },
-  "go.useLanguageServer": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   }
