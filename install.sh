@@ -1,0 +1,29 @@
+#!/bin/bash
+
+sudo apt update
+
+function install {
+  which $1 &> /dev/null
+
+  if [ $? -ne 0 ]; then
+    echo "Installing: ${1}..."
+    sudo apt install -y $1
+  else
+    echo "Already installed: ${1}"
+  fi
+}
+
+# Basics
+install vim
+install tmux
+
+# zsh
+install zsh
+#chsh -s $(which zsh)
+
+# Node.js
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
+# Python
+curl https://pyenv.run | bash
+
