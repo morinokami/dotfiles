@@ -17,10 +17,6 @@ function install {
 install vim
 install tmux
 
-# zsh
-install zsh
-#chsh -s $(which zsh)
-
 # Node.js
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
