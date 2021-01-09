@@ -9,10 +9,10 @@ setopt prompt_subst
 vcs_info_wrapper() {
   vcs_info
   if [ -n "$vcs_info_msg_0_" ]; then
-    echo "%{\033[38;5;12m%}git:(%{\033[m%}%{${fg[red]}%}${vcs_info_msg_0_}%{${reset_color}%}%{\033[38;5;12m%})%{\033[m%} "
+    echo "%{\033[38;5;12m%}(%{\033[m%}%{${fg[red]}%}${vcs_info_msg_0_}%{${reset_color}%}%{\033[38;5;12m%})%{\033[m%} "
   fi
 }
-PROMPT='%F{yellow}λ%f %F{cyan}%1~%f $(vcs_info_wrapper)'
+PROMPT='%F{yellow}[%n]%f %F{cyan}%~%f $(vcs_info_wrapper)'$'\n''%F{magenta}λ%f '
 zstyle ':vcs_info:git:*' formats '%b'
 
 
