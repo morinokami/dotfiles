@@ -12,8 +12,10 @@ vcs_info_wrapper() {
     echo "%{\033[38;5;12m%}(%{\033[m%}%{${fg[red]}%}${vcs_info_msg_0_}%{${reset_color}%}%{\033[38;5;12m%})%{\033[m%} "
   fi
 }
-PROMPT=$'\n''%F{yellow}[%n]%f %F{cyan}%~%f $(vcs_info_wrapper)'$'\n''%F{magenta}λ%f '
+PROMPT='%F{yellow}[%n]%f %F{cyan}%~%f $(vcs_info_wrapper)'$'\n''%F{magenta}λ%f '
 zstyle ':vcs_info:git:*' formats '%b'
+
+precmd() { print "" }
 
 
 # Aliases
