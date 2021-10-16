@@ -2,7 +2,7 @@
 	name = Shinya Fujino
 	email = shf0811@gmail.com
 [core]
-	editor = vim -c \"set fenc=utf-8\"
+	editor = vim --nofork
 	excludesfile = ~/.gitignore_global
 	pager = delta --color-only --theme OneHalfDark
 [interactive]
