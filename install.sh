@@ -18,7 +18,7 @@ install vim
 install tmux
 
 # Node.js
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+curl -fsSL https://fnm.vercel.app/install | bash
 
 # Python
 curl https://pyenv.run | bash

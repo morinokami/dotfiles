@@ -154,24 +154,6 @@ if [ -x "$(command -v go)" ]; then
   export PATH=$PATH:$GOPATH/bin
 fi
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# k8s
-if [ -x "$(command -v kubectl)" ]; then
-  source <(kubectl completion zsh)
-  alias k=kubectl
-  complete -F __start_kubectl k
-fi
-
-# terraform
-if [ -x "$(command -v terraform)" ]; then
-  autoload -U +X bashcompinit && bashcompinit
-  complete -o nospace -C $(which terraform) terraform
-fi
-
 
 #-----------------------------
 # Other
