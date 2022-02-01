@@ -15,7 +15,7 @@ vcs_info_wrapper() {
 PROMPT='%F{yellow}[%n]%f %F{cyan}%~%f $(vcs_info_wrapper)'$'\n''%F{magenta}λ%f '
 zstyle ':vcs_info:git:*' formats '%b'
 
-precmd() { print "" }
+precmd() { printf '\e[30;0;2m'; printf '%.s─' $(seq 1 $(tput cols)); printf '\e[0m\n' }
 
 
 # Aliases
