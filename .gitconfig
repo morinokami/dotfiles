@@ -4,9 +4,9 @@
 [core]
 	editor = vim --nofork
 	excludesfile = ~/.gitignore_global
-	pager = delta --color-only --theme OneHalfDark
+	pager = delta --color-only --syntax-theme OneHalfDark
 [interactive]
-	diffFilter = delta --color-only --theme OneHalfDark
+	diffFilter = delta --color-only --syntax-theme OneHalfDark
 [color]
 	diff = auto
 	status = auto
